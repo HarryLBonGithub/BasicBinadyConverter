@@ -7,7 +7,7 @@ rootWindow.iconbitmap("BasicBinaryConverter\HarryICON1.ico")
 
 #Functions
 def toBinary():
-    pass
+    return
 
 def toDecimal():
     pass
