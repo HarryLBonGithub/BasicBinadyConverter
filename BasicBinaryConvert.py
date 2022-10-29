@@ -3,12 +3,21 @@ from tkinter import *
 #Root Window Setup
 rootWindow = Tk()
 rootWindow.title("Basic Binary Converter")
-rootWindow.iconbitmap("BasicBinaryConverter\HarryICON1.ico")
+rootWindow.iconbitmap("HarryICON1.ico")
 
 #Functions
 def toBinary():
-    #some code will go here
-    pass
+    
+    entry = inputBox.get()
+
+    if entry.isnumeric():
+
+        entryInt = int(entry)
+
+        entryBinary = bin(entryInt)
+
+        resultLabel.config(text=str(entryBinary))
+
 
 def toDecimal():
     pass
@@ -16,7 +25,7 @@ def toDecimal():
 #Object Creation
 inputBox = Entry(rootWindow, width=50)
 toBinaryButton = Button(rootWindow,text= "Convert to Binary", command=toBinary)
-toDecimalButton = Button(rootWindow,text= "Convert to Binary", command=toDecimal)
+toDecimalButton = Button(rootWindow,text= "Convert to Decimal", command=toDecimal)
 resultFrame = LabelFrame(rootWindow, padx=5, pady=5, text="Result", labelanchor= N)
 resultLabel = Label(resultFrame,text="")
 
