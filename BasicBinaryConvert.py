@@ -1,4 +1,5 @@
 from tkinter import *
+from tkinter import messagebox
 
 #Root Window Setup
 rootWindow = Tk()
@@ -18,6 +19,12 @@ def toBinary():
 
         resultLabel.config(text=str(entryBinary[2:]))
 
+    else:
+        messagebox.showerror(title="BAD INPUT", message="Input must be a positive integer.")
+
+        inputBox.delete(0,END)
+        
+        resultLabel.config(text="")
 
 def toDecimal():
 
@@ -36,6 +43,13 @@ def toDecimal():
         entryInt = int(entry,2)
 
         resultLabel.config(text=str(entryInt))
+    
+    else:
+        messagebox.showerror(title="BAD INPUT", message="Input must be only 1s and 0s.")
+
+        inputBox.delete(0,END)
+
+        resultLabel.config(text="")
 
 #Object Creation
 inputBox = Entry(rootWindow, width=50)
