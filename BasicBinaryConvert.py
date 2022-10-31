@@ -4,7 +4,8 @@ from tkinter import messagebox
 #Root Window Setup
 rootWindow = Tk()
 rootWindow.title("Basic Binary Converter")
-rootWindow.iconbitmap("HarryICON1.ico")
+iconInmage = PhotoImage(file="HarryICON1.png")
+rootWindow.iconphoto(False, iconInmage)
 
 #Functions
 def toBinary():
