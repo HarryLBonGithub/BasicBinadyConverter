@@ -16,11 +16,11 @@ def toBinary():
 
         entryBinary = bin(entryInt)
 
-        resultLabel.config(text=str(entryBinary))
+        resultLabel.config(text=str(entryBinary[2:]))
 
 
 def toDecimal():
-    
+
     entry = inputBox.get()
 
     entryIsBinary = True
