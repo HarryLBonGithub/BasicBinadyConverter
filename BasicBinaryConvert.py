@@ -20,11 +20,22 @@ def toBinary():
 
 
 def toDecimal():
+    
     entry = inputBox.get()
 
-    entryInt = int(entry,2)
+    entryIsBinary = True
 
-    resultLabel.config(text=str(entryInt))
+    for eachDigit in entry:
+
+        if eachDigit != "0" and eachDigit != "1":
+
+            entryIsBinary = False
+
+    if entryIsBinary:
+
+        entryInt = int(entry,2)
+
+        resultLabel.config(text=str(entryInt))
 
 #Object Creation
 inputBox = Entry(rootWindow, width=50)
